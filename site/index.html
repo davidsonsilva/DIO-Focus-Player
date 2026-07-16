@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DIO Focus Player é uma extensão não oficial do Chrome que prioriza o player da DIO em tela dividida, com modo foco local e sem telemetria.">
+    <title>DIO Focus Player | Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="brand" href="./index.html" aria-label="Página inicial do DIO Focus Player">
+          <img src="../assets/brand/dio-logo.png" alt="Logo da DIO Focus Player">
+          <div>
+            <strong>DIO Focus Player</strong>
+            <span>Extensão não oficial para estudar em tela dividida</span>
+          </div>
+        </a>
+
+        <nav class="topnav" aria-label="Navegação principal">
+          <a href="#recursos">Recursos</a>
+          <a href="#capturas">Capturas</a>
+          <a href="#publicacao">Publicação</a>
+          <a href="./privacy.html">Privacidade</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div>
+            <p class="eyebrow">Chrome Extension MVP</p>
+            <h1 id="hero-title">Estude na DIO com o player em destaque e a lista sob controle.</h1>
+            <p>
+              O DIO Focus Player reorganiza localmente a aula para reduzir a disputa por espaço entre vídeo,
+              cabeçalho e lista de conteúdos. O resultado é uma experiência mais confortável para quem estuda
+              com a tela dividida, faz anotações ou mantém várias janelas abertas ao mesmo tempo.
+            </p>
+
+            <div class="cta-row">
+              <a class="button button-primary" href="https://github.com/davidsonsilva/DIO-Focus-Player" target="_blank" rel="noreferrer">Ver no GitHub</a>
+              <a class="button button-secondary" href="https://youtu.be/428BtuVY6Fo" target="_blank" rel="noreferrer">Assistir ao vídeo</a>
+              <a class="button button-ghost" href="./privacy.html">Política de privacidade</a>
+            </div>
+
+            <ul class="meta-row" aria-label="Destaques do projeto">
+              <li>Manifest V3</li>
+              <li>Somente local</li>
+              <li>Sem telemetria</li>
+              <li>GPLv3</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Prévia visual do produto">
+            <div class="mock-browser">
+              <div class="mock-browser-header">
+                <div class="dots" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="mock-browser-bar" aria-hidden="true"></div>
+              </div>
+              <div class="mock-browser-body">
+                <img class="hero-shot" src="../imagens/screenshots/1280x800/Tela-01-1280x800.png" alt="Captura da DIO com o modo foco aplicado">
+              </div>
+            </div>
+
+            <div class="mini-cards">
+              <article class="panel">
+                <p class="panel-title">Modo foco</p>
+                <strong>Reversível e previsível</strong>
+                <p>O layout original volta com um clique, sem depender de recarregar a página.</p>
+              </article>
+
+              <article class="panel">
+                <p class="panel-title">Privacidade</p>
+                <strong>Armazenamento local</strong>
+                <p>Preferências ficam no navegador do usuário e a extensão não envia telemetria.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="recursos" class="section" aria-labelledby="features-title">
+          <div class="section-header">
+            <div>
+              <h2 id="features-title">Recursos pensados para estudo real</h2>
+            </div>
+            <p>
+              A proposta é simples: reduzir ruído visual, preservar o que importa e deixar claro quando a página
+              não é compatível.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">1</div>
+              <h3>Player em evidência</h3>
+              <p>O vídeo ganha prioridade e ocupa melhor a área disponível em janelas estreitas ou divididas.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">2</div>
+              <h3>Sumário controlado</h3>
+              <p>A lista de aulas pode ser exibida ou ocultada conforme a necessidade de foco do estudante.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">3</div>
+              <h3>Experiência local</h3>
+              <p>Não há backend, telemetria ou chamada remota. A adaptação acontece direto no navegador.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">4</div>
+              <h3>Pronto para store</h3>
+              <p>Landing, política de privacidade, screenshots e vídeo já estão organizados para a publicação.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="capturas" class="section" aria-labelledby="screenshots-title">
+          <div class="section-header">
+            <div>
+              <h2 id="screenshots-title">Capturas para divulgação e Chrome Web Store</h2>
+            </div>
+            <p>
+              As imagens abaixo estão alinhadas com o pacote de publicação. A coleção principal usa as versões
+              em 1280x800 para manter nitidez na loja.
+            </p>
+          </div>
+
+          <div class="screenshots-grid">
+            <figure class="screenshot-card">
+              <img src="../imagens/screenshots/1280x800/Tela-01-1280x800.png" alt="Tela da DIO com a lista de aulas e o player visível">
+              <figcaption>Visão geral da aula com o layout pronto para foco e a lista de conteúdos preservada.</figcaption>
+            </figure>
+
+            <figure class="screenshot-card">
+              <img src="../imagens/screenshots/1280x800/Tela-02-1280x800.png" alt="Tela da DIO com o modo foco na barra lateral">
+              <figcaption>Modo foco com controles visíveis e a área do player priorizada.</figcaption>
+            </figure>
+
+            <figure class="screenshot-card">
+              <img src="../imagens/screenshots/1280x800/Tela-03-1280x800.png" alt="Lista de aulas da DIO em destaque">
+              <figcaption>Estrutura da lista de aulas reconhecida pela extensão durante os testes.</figcaption>
+            </figure>
+
+            <figure class="screenshot-card">
+              <img src="../imagens/screenshots/1280x800/Tela-04-1280x800.png" alt="Estado do popup da extensão DIO Focus Player">
+              <figcaption>Popup com controles de foco e opções visuais prontas para o usuário.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="publicacao" class="section" aria-labelledby="publish-title">
+          <div class="section-header">
+            <div>
+              <h2 id="publish-title">Pronto para publicação com poucos ajustes finais</h2>
+            </div>
+            <p>
+              O repositório já organiza o que normalmente entra na revisão da loja: texto da listagem,
+              política de privacidade, vídeo e capturas.
+            </p>
+          </div>
+
+          <div class="callout">
+            <div>
+              <h2>Checklist de publicação</h2>
+              <p>
+                Política pública separada, aviso de extensão não oficial, screenshots em boa resolução,
+                vídeo promocional, ícone instalado localmente e comportamento descrito de forma precisa.
+              </p>
+            </div>
+            <div class="callout-links">
+              <a class="button button-primary" href="./privacy.html">Abrir privacidade</a>
+              <a class="button button-secondary" href="https://github.com/davidsonsilva/DIO-Focus-Player/issues" target="_blank" rel="noreferrer">Suporte / Issues</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          DIO Focus Player é um projeto independente e não oficial. DIO e seus sinais distintivos pertencem
+          aos respectivos proprietários. O uso do logotipo na documentação e nas capturas deste repositório
+          não concede direitos sobre marca nem substitui revisão jurídica para publicação pública.
+        </p>
+        <div class="footer-links">
+          <a href="https://github.com/davidsonsilva/DIO-Focus-Player" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://youtu.be/428BtuVY6Fo" target="_blank" rel="noreferrer">Vídeo</a>
+          <a href="./privacy.html">Privacidade</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

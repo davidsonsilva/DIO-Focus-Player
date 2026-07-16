@@ -40,6 +40,14 @@ As regras de produto ficam em `src/domain`, os casos de uso em `src/application`
 
 A extensão não envia dados nem faz chamadas de rede. Preferências e o último estado conhecido são armazenados localmente pelas APIs do Chrome. Leia [docs/PRIVACY.md](docs/PRIVACY.md).
 
+## Landing page pública
+
+A divulgação do projeto usa uma landing page separada com política de privacidade própria:
+
+- [site/index.html](site/index.html)
+- [site/privacy.html](site/privacy.html)
+- [docs/STORE_LISTING.md](docs/STORE_LISTING.md)
+
 ## Marca
 
 Este projeto não é afiliado, patrocinado ou mantido pela DIO. DIO e seu logotipo pertencem aos respectivos proprietários. O uso do logotipo no protótipo local não autoriza sua publicação na Chrome Web Store.
