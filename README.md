@@ -1,0 +1,45 @@
+# DIO Focus Player
+
+Extensão não oficial para Google Chrome que prioriza o player das aulas da DIO em janelas estreitas e telas divididas.
+
+## Estado
+
+Versão `0.3.0`: núcleo simplificado com um toggle de modo foco, duas opções de barra e sumário sempre visível.
+
+O modo automático e o recolhimento do sumário foram retirados desta versão para estabilizar o comportamento essencial antes de evoluir a interface.
+
+## Instalação para desenvolvimento
+
+Requisitos: Node.js 22 ou superior.
+
+```powershell
+npm install
+npm run validate
+```
+
+Depois:
+
+1. Abra `chrome://extensions`.
+2. Ative o **Modo do desenvolvedor**.
+3. Clique em **Carregar sem compactação**.
+4. Selecione a pasta `dist` deste projeto.
+5. Abra uma aula em `https://web.dio.me/`.
+
+## Comandos
+
+- `npm test`: executa testes unitários e de casos de uso.
+- `npm run check`: verifica manifesto, permissões e código dinâmico/remoto.
+- `npm run build`: gera a extensão em `dist/`.
+- `npm run validate`: executa todas as verificações acima.
+
+## Arquitetura
+
+As regras de produto ficam em `src/domain`, os casos de uso em `src/application` e os detalhes de Chrome/DIO em `src/infrastructure`. Os entrypoints em `src/bootstrap` compõem as dependências. Consulte [docs/PROJECT_PLAN.md](docs/PROJECT_PLAN.md).
+
+## Privacidade
+
+A extensão não envia dados nem faz chamadas de rede. Preferências e o último estado conhecido são armazenados localmente pelas APIs do Chrome. Leia [docs/PRIVACY.md](docs/PRIVACY.md).
+
+## Marca
+
+Este projeto não é afiliado, patrocinado ou mantido pela DIO. DIO e seu logotipo pertencem aos respectivos proprietários. O uso do logotipo no protótipo local não autoriza sua publicação na Chrome Web Store.

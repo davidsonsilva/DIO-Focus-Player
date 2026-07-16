@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DIO Focus Player</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header class="brand">
+        <img src="../assets/brand/dio-logo.png" alt="DIO">
+        <div>
+          <strong>Focus Player</strong>
+          <span>Extensão não oficial</span>
+        </div>
+      </header>
+
+      <p id="status" class="status" role="status" aria-live="polite">Verificando esta página…</p>
+
+      <form id="settings-form">
+        <label class="switch-row">
+          <span>
+            <strong>Modo foco</strong>
+            <small>Permite adaptar o layout da aula</small>
+          </span>
+          <input id="enabled" name="enabled" type="checkbox">
+        </label>
+
+        <fieldset class="header-options">
+          <legend>Barras superiores</legend>
+          <label><input id="hideHeaderLevel1" name="hideHeaderLevel1" type="checkbox"> Ocultar cabeçalho da aula</label>
+          <label><input id="hideHeaderLevel2" name="hideHeaderLevel2" type="checkbox"> Ocultar barra de progresso</label>
+        </fieldset>
+
+      </form>
+
+      <footer>As preferências reiniciam ao recarregar a extensão.</footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

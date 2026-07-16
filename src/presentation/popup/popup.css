@@ -1,0 +1,29 @@
+:root {
+  color-scheme: dark;
+  font: 14px/1.4 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #1f2029;
+  color: #f7f7fb;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 330px; }
+main { padding: 20px; }
+.brand { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.brand img { width: 92px; height: auto; }
+.brand div { display: grid; }
+.brand strong { font-size: 18px; }
+.brand span, small, footer { color: #b9bac7; }
+.status { padding: 10px 12px; border-left: 3px solid #e91e63; background: #292a35; border-radius: 4px; }
+.status[data-state="active"] { border-color: #1fd892; }
+.status[data-state="unsupported"] { border-color: #f5a623; }
+.switch-row { display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 12px 0; }
+.switch-row span { display: grid; }
+input[type="checkbox"] { width: 22px; height: 22px; accent-color: #e91e63; }
+fieldset { display: grid; gap: 8px; margin: 8px 0 16px; border: 1px solid #41434f; border-radius: 8px; }
+.header-options { margin-top: 16px; }
+.header-options label { display: flex; align-items: center; gap: 8px; }
+.header-options input { width: 18px; height: 18px; }
+input { accent-color: #e91e63; }
+input:focus-visible { outline: 3px solid #56c9f1; outline-offset: 2px; }
+footer { margin-top: 16px; font-size: 12px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }

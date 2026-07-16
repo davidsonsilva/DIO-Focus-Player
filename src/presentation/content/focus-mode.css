@@ -1,0 +1,123 @@
+html.dio-focus-player-active .dio-focus-player-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-rows: auto auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"] {
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-rows: 4rem 3rem minmax(360px, calc(100vh - 7rem)) auto !important;
+  overflow-y: auto !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"][data-dio-focus-hidden-headers="10"] {
+  grid-template-rows: 0 3rem minmax(360px, calc(100vh - 3rem)) auto !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"][data-dio-focus-hidden-headers="01"] {
+  grid-template-rows: 4rem 0 minmax(360px, calc(100vh - 4rem)) auto !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"][data-dio-focus-hidden-headers="11"] {
+  grid-template-rows: 0 0 minmax(360px, 100vh) auto !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-hidden {
+  display: none !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"] > * {
+  grid-column: 1 !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"] > .dio-focus-player-header-one {
+  grid-row: 1 !important;
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"] > .dio-focus-player-header-two {
+  grid-row: 2 !important;
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"] > .dio-focus-player-hidden {
+  display: none !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"] > .dio-focus-player-video {
+  grid-row: 3 !important;
+  min-height: 360px !important;
+  height: calc(100vh - 7rem) !important;
+  overflow: hidden !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"][data-dio-focus-hidden-headers="10"] > .dio-focus-player-video {
+  height: calc(100vh - 3rem) !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"][data-dio-focus-hidden-headers="01"] > .dio-focus-player-video {
+  height: calc(100vh - 4rem) !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"][data-dio-focus-hidden-headers="11"] > .dio-focus-player-video {
+  height: 100vh !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"] > .dio-focus-player-summary {
+  grid-row: 4 !important;
+  position: relative !important;
+  inset: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  transform: none !important;
+  translate: none !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  overflow-anchor: none !important;
+  z-index: auto !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout:not([data-dio-focus-strategy="known-layout-v2026-07"]) .dio-focus-player-video {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout:not([data-dio-focus-strategy="known-layout-v2026-07"]) .dio-focus-player-summary {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  position: relative !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  max-height: 55vh !important;
+  overflow-y: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.dio-focus-player-active *,
+  html.dio-focus-player-active *::before,
+  html.dio-focus-player-active *::after {
+    scroll-behavior: auto !important;
+  }
+}

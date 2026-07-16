@@ -1,0 +1,16 @@
+{
+  "name": "dio-focus-player",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Extensão não oficial que prioriza o player da DIO em telas divididas.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test",
+    "check": "node scripts/check.js",
+    "validate": "npm run check && npm test && npm run build"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.6"
+  }
+}
