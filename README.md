@@ -43,3 +43,9 @@ A extensão não envia dados nem faz chamadas de rede. Preferências e o último
 ## Marca
 
 Este projeto não é afiliado, patrocinado ou mantido pela DIO. DIO e seu logotipo pertencem aos respectivos proprietários. O uso do logotipo no protótipo local não autoriza sua publicação na Chrome Web Store.
+
+## Licença
+
+O código-fonte é distribuído sob a [GNU General Public License v3.0 ou posterior](LICENSE). Você pode usar, estudar, modificar e redistribuir o projeto, inclusive comercialmente, desde que cumpra a GPLv3, mantenha a mesma liberdade nas versões distribuídas e disponibilize o código-fonte correspondente.
+
+A licença do código não concede direitos sobre marcas, logotipos, vídeos, screenshots ou conteúdo da DIO e de outros terceiros. Consulte [NOTICE.md](NOTICE.md) para os avisos completos.
