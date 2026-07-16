@@ -95,6 +95,14 @@ html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="k
   z-index: auto !important;
 }
 
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="known-layout-v2026-07"] > .dio-focus-player-summary.dio-focus-player-summary-hidden {
+  display: none !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout:not([data-dio-focus-strategy="known-layout-v2026-07"]) .dio-focus-player-summary.dio-focus-player-summary-hidden {
+  display: none !important;
+}
+
 html.dio-focus-player-active .dio-focus-player-layout:not([data-dio-focus-strategy="known-layout-v2026-07"]) .dio-focus-player-video {
   grid-column: 1 !important;
   grid-row: 1 !important;

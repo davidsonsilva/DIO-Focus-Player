@@ -1,6 +1,6 @@
 {
   "name": "dio-focus-player",
-  "version": "0.3.0",
+  "version": "0.3.6",
   "private": true,
   "type": "module",
   "description": "Extensão não oficial que prioriza o player da DIO em telas divididas.",

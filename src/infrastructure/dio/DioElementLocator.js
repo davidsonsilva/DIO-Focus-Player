@@ -81,6 +81,14 @@ export class DioElementLocator {
     return { container, player, summary: summaryColumn };
   }
 
+  locateLessonSummary() {
+    const lessonItem = this.root.querySelector('[id^="content-item-"]');
+    if (!lessonItem) return null;
+    let list = lessonItem.closest('ul');
+    while (list?.parentElement?.closest?.('ul')) list = list.parentElement.closest('ul');
+    return list;
+  }
+
   locateByPlayerStructure() {
     const playerLeaf = this.root.querySelector('video, iframe[allow*="fullscreen"], iframe[src*="player" i]');
     if (!playerLeaf) return null;
@@ -125,7 +133,7 @@ export class DioElementLocator {
     const directChildren = [...container.children].filter((element) => element.nodeType === 1);
     if (directChildren.length < 4) return null;
 
-    const scrollElement = this.root.querySelector(LEGACY_SCROLL_SELECTOR);
+    const scrollElement = this.root.querySelector(LEGACY_SCROLL_SELECTOR) ?? this.locateLessonSummary();
     const playerElement = this.root.querySelector(KNOWN_PLAYER_SELECTOR);
     const headerOneElement = this.root.querySelector(KNOWN_HEADER_ONE_SELECTOR);
     const headerTwoElement = this.root.querySelector(KNOWN_HEADER_TWO_SELECTOR);

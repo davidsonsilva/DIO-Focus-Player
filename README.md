@@ -4,9 +4,9 @@ Extensão não oficial para Google Chrome que prioriza o player das aulas da DIO
 
 ## Estado
 
-Versão `0.3.0`: núcleo simplificado com um toggle de modo foco, duas opções de barra e sumário sempre visível.
+Versão `0.3.6`: desligar o modo foco preserva e desabilita visualmente as opções dependentes.
 
-O modo automático e o recolhimento do sumário foram retirados desta versão para estabilizar o comportamento essencial antes de evoluir a interface.
+O modo automático continua fora desta versão. A lista de aulas pode ser ocultada por um check enquanto o modo foco estiver ativo.
 
 ## Instalação para desenvolvimento
 

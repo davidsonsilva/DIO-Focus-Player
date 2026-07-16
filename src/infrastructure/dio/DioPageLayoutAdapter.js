@@ -2,6 +2,7 @@ const ROOT_CLASS = 'dio-focus-player-active';
 const CONTAINER_CLASS = 'dio-focus-player-layout';
 const PLAYER_CLASS = 'dio-focus-player-video';
 const SUMMARY_CLASS = 'dio-focus-player-summary';
+const SUMMARY_HIDDEN_CLASS = 'dio-focus-player-summary-hidden';
 const HEADER_ONE_CLASS = 'dio-focus-player-header-one';
 const HEADER_TWO_CLASS = 'dio-focus-player-header-two';
 const HIDDEN_CLASS = 'dio-focus-player-hidden';
@@ -48,6 +49,7 @@ export class DioPageLayoutAdapter {
     }
     player?.classList.add(PLAYER_CLASS);
     summary?.classList.add(SUMMARY_CLASS);
+    summary?.classList.toggle(SUMMARY_HIDDEN_CLASS, settings.hideSummary);
   }
 
   restoreOriginalLayout() {
@@ -56,7 +58,7 @@ export class DioPageLayoutAdapter {
   }
 
   clearElementDecorations() {
-    for (const className of [CONTAINER_CLASS, PLAYER_CLASS, SUMMARY_CLASS, HEADER_ONE_CLASS, HEADER_TWO_CLASS, HIDDEN_CLASS]) {
+    for (const className of [CONTAINER_CLASS, PLAYER_CLASS, SUMMARY_CLASS, SUMMARY_HIDDEN_CLASS, HEADER_ONE_CLASS, HEADER_TWO_CLASS, HIDDEN_CLASS]) {
       for (const element of this.root.querySelectorAll(`.${className}`)) element.classList.remove(className);
     }
     for (const element of this.root.querySelectorAll('[data-dio-focus-strategy]')) {

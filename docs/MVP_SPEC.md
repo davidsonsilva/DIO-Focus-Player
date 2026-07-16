@@ -25,7 +25,20 @@ Cenário: usuário liga o modo foco
   Dado que uma página compatível está aberta
   Quando o usuário marcar o toggle principal
   Então o modo foco deve ser aplicado independentemente da largura
-  E o sumário deve permanecer visível abaixo do player
+  E o sumário deve aparecer abaixo do player por padrão
+
+Cenário: usuário desliga o modo foco
+  Dado que opções visuais estão marcadas
+  Quando o usuário desmarcar o modo foco
+  Então o layout original deve ser restaurado
+  E todas as opções visuais devem preservar suas escolhas e ficar desabilitadas
+
+Cenário: usuário oculta e exibe a lista de aulas
+  Dado que o modo foco está ativo
+  Quando o usuário marcar Ocultar lista de aulas
+  Então o sumário deve ser removido visualmente sem alterar o player
+  Quando o usuário desmarcar Ocultar lista de aulas
+  Então o sumário deve voltar abaixo do player
 ```
 
 ## Compatibilidade

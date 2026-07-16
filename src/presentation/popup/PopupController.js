@@ -15,8 +15,15 @@ export class PopupController {
 
   renderSettings(settings) {
     this.document.querySelector('#enabled').checked = settings.enabled;
-    this.document.querySelector('#hideHeaderLevel1').checked = settings.hideHeaderLevel1;
-    this.document.querySelector('#hideHeaderLevel2').checked = settings.hideHeaderLevel2;
+    const headerOneCheckbox = this.document.querySelector('#hideHeaderLevel1');
+    const headerTwoCheckbox = this.document.querySelector('#hideHeaderLevel2');
+    const summaryCheckbox = this.document.querySelector('#hideSummary');
+    headerOneCheckbox.checked = settings.hideHeaderLevel1;
+    headerTwoCheckbox.checked = settings.hideHeaderLevel2;
+    summaryCheckbox.checked = settings.hideSummary;
+    headerOneCheckbox.disabled = !settings.enabled;
+    headerTwoCheckbox.disabled = !settings.enabled;
+    summaryCheckbox.disabled = !settings.enabled;
   }
 
   async renderStatus() {
@@ -68,6 +75,7 @@ export class PopupController {
         enabled: this.document.querySelector('#enabled').checked,
         hideHeaderLevel1: this.document.querySelector('#hideHeaderLevel1').checked,
         hideHeaderLevel2: this.document.querySelector('#hideHeaderLevel2').checked,
+        hideSummary: this.document.querySelector('#hideSummary').checked,
       });
       this.renderSettings(settings);
       await this.refreshActiveTab();
