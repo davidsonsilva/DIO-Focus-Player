@@ -4,7 +4,7 @@ Extensão não oficial para Google Chrome que prioriza o player das aulas da DIO
 
 ## Estado
 
-Versão `0.3.6`: desligar o modo foco preserva e desabilita visualmente as opções dependentes.
+Versão `1.0.0`: o modo foco está estável para publicação, com preservação visual das opções dependentes.
 
 O modo automático continua fora desta versão. A lista de aulas pode ser ocultada por um check enquanto o modo foco estiver ativo.
 

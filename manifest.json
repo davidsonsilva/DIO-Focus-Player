@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "DIO Focus Player — não oficial",
-  "version": "0.3.6",
+  "version": "1.0.0",
   "description": "Prioriza o player das aulas da DIO em janelas estreitas e telas divididas.",
   "permissions": ["storage", "activeTab"],
   "action": {
