@@ -107,8 +107,34 @@ html.dio-focus-player-active .dio-focus-player-layout:not([data-dio-focus-strate
   grid-column: 1 !important;
   grid-row: 1 !important;
   width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
   min-width: 0 !important;
   max-width: none !important;
+}
+
+/* Keep the lesson headers above the player on the current four-part layout. */
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="lesson-structure"][data-dio-focus-hidden-headers] {
+  grid-template-areas: none !important;
+  grid-template-rows: auto auto auto auto !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="lesson-structure"][data-dio-focus-hidden-headers] > * {
+  grid-column: 1 !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+html.dio-focus-player-active [data-dio-focus-strategy="lesson-structure"] > .dio-focus-player-header-one {
+  grid-row: 1 !important;
+}
+
+html.dio-focus-player-active [data-dio-focus-strategy="lesson-structure"] > .dio-focus-player-header-two {
+  grid-row: 2 !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="lesson-structure"][data-dio-focus-hidden-headers] > .dio-focus-player-video {
+  grid-row: 3 !important;
 }
 
 html.dio-focus-player-active .dio-focus-player-layout:not([data-dio-focus-strategy="known-layout-v2026-07"]) .dio-focus-player-summary {
@@ -120,6 +146,34 @@ html.dio-focus-player-active .dio-focus-player-layout:not([data-dio-focus-strate
   height: auto !important;
   max-height: 55vh !important;
   overflow-y: auto !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="lesson-structure"][data-dio-focus-hidden-headers] > .dio-focus-player-summary {
+  grid-row: 4 !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="lab-layout"] > .dio-focus-player-video {
+  aspect-ratio: auto !important;
+  flex-basis: auto !important;
+}
+
+html.dio-focus-player-active .dio-focus-player-layout[data-dio-focus-strategy="lab-layout"] > .dio-focus-player-summary {
+  flex-basis: auto !important;
+  max-height: none !important;
+}
+
+/* Clappr's absolute children need a sized media surface after the column becomes auto-height. */
+html.dio-focus-player-active [data-dio-focus-strategy="lab-layout"] .lesson-video > div:has(iframe, video) {
+  position: relative !important;
+  flex: none !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+}
+
+html.dio-focus-player-active [data-dio-focus-strategy="lab-layout"] .lesson-video > div div:has(iframe, video),
+html.dio-focus-player-active [data-dio-focus-strategy="lab-layout"] .lesson-video iframe,
+html.dio-focus-player-active [data-dio-focus-strategy="lab-layout"] .lesson-video video {
+  height: 100% !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

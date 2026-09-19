@@ -37,7 +37,7 @@ export class DioPageLayoutAdapter {
     this.root.documentElement.classList.add(ROOT_CLASS);
     container.classList.add(CONTAINER_CLASS);
     container.dataset.dioFocusStrategy = this.elements.strategy ?? 'semantic';
-    if (this.elements.strategy === 'known-layout-v2026-07') {
+    if (this.elements.headerOne || this.elements.headerTwo) {
       const { headerOne, headerTwo } = this.elements;
       headerOne?.classList.add(HEADER_ONE_CLASS);
       headerTwo?.classList.add(HEADER_TWO_CLASS);
@@ -49,7 +49,10 @@ export class DioPageLayoutAdapter {
     }
     player?.classList.add(PLAYER_CLASS);
     summary?.classList.add(SUMMARY_CLASS);
-    summary?.classList.toggle(SUMMARY_HIDDEN_CLASS, settings.hideSummary);
+    const { summaryItems, headerTwo } = this.elements;
+    for (const item of summaryItems ?? []) item.classList.toggle(HIDDEN_CLASS, settings.hideSummary);
+    summary?.classList.toggle(SUMMARY_HIDDEN_CLASS, settings.hideSummary &&
+      (!summaryItems || !headerTwo || settings.hideHeaderLevel2));
   }
 
   restoreOriginalLayout() {
@@ -63,6 +66,7 @@ export class DioPageLayoutAdapter {
     }
     for (const element of this.root.querySelectorAll('[data-dio-focus-strategy]')) {
       delete element.dataset.dioFocusStrategy;
+      delete element.dataset.dioFocusHiddenHeaders;
     }
   }
 

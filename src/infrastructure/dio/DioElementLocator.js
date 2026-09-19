@@ -1,8 +1,9 @@
 const PLAYER_SELECTORS = [
-  '[data-testid*="player" i]',
-  '[class*="player" i]',
   'video',
   'iframe[allow*="fullscreen"]',
+  'iframe[src*="youtube.com/embed/" i]',
+  '[data-testid*="player" i]',
+  '[class*="player" i]',
 ];
 
 const SUMMARY_SELECTORS = [
@@ -51,8 +52,14 @@ export class DioElementLocator {
   }
 
   locate() {
+    const labLayout = this.locateLabLayout();
+    if (labLayout) return labLayout;
+
     const knownLayout = this.locateKnownLayoutFallback();
     if (knownLayout) return knownLayout;
+
+    const lessonStructure = this.locateByLessonStructure();
+    if (lessonStructure) return lessonStructure;
 
     const structural = this.locateByPlayerStructure();
     if (structural) return structural;
@@ -81,6 +88,21 @@ export class DioElementLocator {
     return { container, player, summary: summaryColumn };
   }
 
+  locateLabLayout() {
+    const container = this.root.querySelector('.lab-container > .row');
+    const player = container?.querySelector(':scope > .lesson-content');
+    const summary = container?.querySelector(':scope > .track-lessons');
+    const tabs = summary?.querySelector(':scope > .nav');
+    const content = summary?.querySelector(':scope > .tab-content');
+    if (!player?.querySelector('video, iframe') || !tabs || !content) return null;
+    return {
+      container, player, summary, summaryItems: [tabs, content],
+      headerOne: player.querySelector('.lesson-video > .card-header'),
+      headerTwo: summary.querySelector(':scope > .desktop'),
+      strategy: 'lab-layout',
+    };
+  }
+
   locateLessonSummary() {
     const lessonItem = this.root.querySelector('[id^="content-item-"]');
     if (!lessonItem) return null;
@@ -89,8 +111,29 @@ export class DioElementLocator {
     return list;
   }
 
+  locateByLessonStructure() {
+    const playerLeaf = firstMatch(this.root, PLAYER_SELECTORS);
+    const lessonList = this.locateLessonSummary();
+    if (!playerLeaf || !lessonList) return null;
+
+    const container = commonAncestor(playerLeaf, lessonList);
+    if (!container || container === this.root.body) return null;
+
+    let player = playerLeaf;
+    while (player.parentElement && player.parentElement !== container) player = player.parentElement;
+    let summary = lessonList;
+    while (summary.parentElement && summary.parentElement !== container) summary = summary.parentElement;
+    if (player === summary) return null;
+
+    const headers = [...container.children].filter((child) => child !== player && child !== summary);
+    return {
+      container, player, summary, strategy: 'lesson-structure',
+      ...(headers.length === 2 ? { headerOne: headers[0], headerTwo: headers[1] } : {}),
+    };
+  }
+
   locateByPlayerStructure() {
-    const playerLeaf = this.root.querySelector('video, iframe[allow*="fullscreen"], iframe[src*="player" i]');
+    const playerLeaf = this.root.querySelector('video, iframe[allow*="fullscreen"], iframe[src*="youtube.com/embed/" i], iframe[src*="player" i]');
     if (!playerLeaf) return null;
 
     const view = this.root.defaultView;

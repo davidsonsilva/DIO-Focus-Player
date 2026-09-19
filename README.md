@@ -2,11 +2,27 @@
 
 Extensão não oficial para Google Chrome que prioriza o player das aulas da DIO em janelas estreitas e telas divididas.
 
-## Estado
+## Novidades da versão 1.0.1
 
-Versão `1.0.0`: o modo foco está estável para publicação, com preservação visual das opções dependentes.
+A versão `1.0.1` corrige o modo foco nos formatos novos e antigos de aulas da DIO, incluindo aulas de projetos (`/lab/`).
 
-O modo automático continua fora desta versão. A lista de aulas pode ser ocultada por um check enquanto o modo foco estiver ativo.
+- Reconhecimento do player em páginas onde o modo foco aparecia como ativo, mas não ajustava o layout.
+- Correção do desaparecimento do vídeo, preservando sua proporção e os controles de reprodução.
+- Cabeçalho da aula posicionado acima do vídeo.
+- Controle independente para ocultar cabeçalho, barra de progresso e lista de aulas.
+- Reaplicação das escolhas ao alterar as opções e restauração do layout ao desligar o modo foco.
+
+<p align="center">
+  <img src="imagens/artigo-1.0.1/infografico.png" width="640" alt="Cinco melhorias da versão 1.0.1: compatibilidade ampliada, vídeo visível, cabeçalho no lugar, controles separados e restauração do layout.">
+</p>
+
+Leia o [artigo sobre a atualização](docs/ARTIGO_DIO_1.0.1.md) ou consulte as [notas da versão para a loja](docs/STORE_LISTING.md#novidades-da-versão-101).
+
+## Como usar
+
+Abra uma aula da DIO, clique no ícone da extensão e ative o **Modo foco**. Selecione apenas os elementos que deseja ocultar: cabeçalho, barra de progresso ou lista de aulas. Por exemplo, você pode manter o progresso visível e ocultar os outros dois elementos.
+
+Desative o modo foco para restaurar o layout original. O modo automático continua fora desta versão.
 
 ## Instalação para desenvolvimento
 

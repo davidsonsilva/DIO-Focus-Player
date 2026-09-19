@@ -1,5 +1,17 @@
 # Materiais da Chrome Web Store
 
+## Novidades da versão 1.0.1
+
+Esta atualização corrige problemas do modo foco nos formatos novos e antigos de aulas da DIO, incluindo aulas de projetos.
+
+- Corrigido o reconhecimento do player em páginas onde o modo foco aparecia como ativo, mas não reorganizava o conteúdo corretamente.
+- Corrigido o desaparecimento do vídeo ao ativar o modo foco, preservando sua proporção e os controles de reprodução.
+- Corrigido o posicionamento do cabeçalho da aula, que podia aparecer abaixo do vídeo.
+- Corrigida a aplicação das opções de ocultação: cabeçalho, barra de progresso e lista de aulas podem ser controlados separadamente. Ativar o modo foco respeita as opções selecionadas.
+- Ajustada a reaplicação do layout ao alterar as opções e a restauração ao desligar o modo foco.
+
+O DIO Focus Player é uma extensão independente e não oficial, sem vínculo com a DIO.
+
 ## Site público
 
 - Landing page: `site/index.html`

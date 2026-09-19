@@ -2,7 +2,8 @@
 
 ## Pacote de upload
 
-- Arquivo final: `release/dio-focus-player-store-1.0.0.zip`
+- Arquivo final: `release/dio-focus-player-store-1.0.1.zip`
+- Texto da atualização: [Novidades da versão 1.0.1](STORE_LISTING.md#novidades-da-versão-101).
 - Conteúdo esperado: saída compactada de `dist/`
 - Não incluir: `.worktrees/`, `imagens/` do repositório fonte, docs, nem arquivos de desenvolvimento
 
